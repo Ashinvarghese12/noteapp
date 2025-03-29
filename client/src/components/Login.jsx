@@ -19,11 +19,11 @@ export default function Login({ setToken, setPage, setUserName }) {
       localStorage.setItem('token', res.data.token);
       setToken(res.data.token);
       setUserName(user.name);
-      toast.success('Login Successful');
+      toast.success('Login Successful', { delay: 2000 });
       setEmail('');
       setPassword('');
     } catch (err) {
-      toast.error('Login failed. Please check your credentials.');
+      toast.error('Login failed. Please check your credentials.', { delay: 2000 });
     }
   };
 
